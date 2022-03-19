@@ -1,5 +1,5 @@
 {
-    "roots": ["policies"],
+    "roots": ["policies", "todo"],
     "metadata": {
       "required_builtins": {
           "builtin1": [
