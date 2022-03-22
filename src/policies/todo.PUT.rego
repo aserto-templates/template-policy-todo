@@ -10,7 +10,7 @@ allowed {
   roles := { "clone", "little_helper"}
   some x in roles
   user.attributes.roles[_] == x
-  user.id == resource.id
+  user.email == resource.ownerEmail
 }
 
 allowed {
