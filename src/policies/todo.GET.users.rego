@@ -1,3 +1,3 @@
 package todo.GET.users
 
-default allowed
+default allowed = true
