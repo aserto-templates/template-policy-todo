@@ -5,7 +5,7 @@ import input.resource
 import future.keywords.in
 
 allowed {
-  roles := { "clone", "sidekick"}
+  roles := { "clone", "little_helper"}
   some x in roles
   user.attributes.roles[_] == x
   user.email == resource.ownerEmail
