@@ -1,4 +1,4 @@
-package todo.DELETE.todo.__id
+package todo.DELETE.todo
 
 import input.user
 import input.resource
