@@ -1,3 +1,3 @@
-package todo.GET.user.__userID
+package todoApp.GET.user.__userID
 
 default allowed = true

@@ -1,5 +1,5 @@
 {
-    "roots": ["policies", "todo"],
+    "roots": ["policies", "todoApp"],
     "metadata": {
       "required_builtins": {
           "builtin1": [

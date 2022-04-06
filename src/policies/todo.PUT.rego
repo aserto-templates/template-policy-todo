@@ -1,4 +1,4 @@
-package todo.PUT.todo
+package todoApp.PUT.todo
 
 import input.user
 import input.resource
