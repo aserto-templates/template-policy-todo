@@ -11,8 +11,3 @@ allowed {
   some x in roles
   user.attributes.roles[_] == x
 }
-
-allowed {
-  some id , _ in user.identities
-  id == resource.ownerID
-}
