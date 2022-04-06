@@ -10,3 +10,7 @@ allowed {
   some x in roles
   user.attributes.roles[_] == x
 }
+
+allowed {
+  resource.ownerId in user.identities
+}
