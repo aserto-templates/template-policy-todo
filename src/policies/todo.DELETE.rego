@@ -16,3 +16,8 @@ allowed {
 allowed {
   user.attributes.roles[_] == "evil_genius"
 }
+
+allowed {
+  some id , _ in user.identities
+  id == resource.ownerID
+}

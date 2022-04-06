@@ -13,5 +13,6 @@ allowed {
 }
 
 allowed {
-  some resource.ownerId, _ in user.identities
+  some id , _ in user.identities
+  id == resource.ownerID
 }
