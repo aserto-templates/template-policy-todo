@@ -7,8 +7,8 @@ import future.keywords.in
 default allowed = false
 
 allowed {
-  roles := { "clone", "little_helper"}
-  some x in roles
+  allowedRoles := { "clone", "little_helper"}
+  some x in allowedRoles
   user.attributes.roles[_] == x
   some id , _ in user.identities
   id == resource.ownerID

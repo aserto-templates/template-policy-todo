@@ -7,7 +7,7 @@ import input.resource
 default allowed = false
 
 allowed {
-  roles := { "clone", "little_helper", "evil_genius"}
-  some x in roles
+  allowedRoles := { "clone", "little_helper", "evil_genius"}
+  some x in allowedRoles
   user.attributes.roles[_] == x
 }
