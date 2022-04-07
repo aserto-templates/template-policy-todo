@@ -1,4 +1,4 @@
-package todoApp.DELETE.todo
+package todoApp.PUT.todo.__ownerID
 
 import input.user
 import input.resource

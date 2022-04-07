@@ -1,4 +1,4 @@
-package todoApp.PUT.todo.__id
+package todoApp.DELETE.todo.__ownerID
 
 import input.user
 import input.resource
@@ -11,7 +11,7 @@ allowed {
   some x in allowedRoles
   user.attributes.roles[_] == x
   some id , _ in user.identities
-  id == resource.id
+  id == resource.ownerID
 }
 
 allowed {
