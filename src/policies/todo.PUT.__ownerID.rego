@@ -1,4 +1,4 @@
-package todoApp.PUT.todo.__ownerID
+package todoApp.PUT.todo.__oid
 
 import input.user
 import input.resource
@@ -9,7 +9,7 @@ default allowed = false
 allowed {
   user.attributes.roles[_] == "editor"
   some id , _ in user.identities
-  id == resource.ownerID
+  id == resource.oid
 }
 
 allowed {
