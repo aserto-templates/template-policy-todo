@@ -1,4 +1,4 @@
-package todoApp.PUT.todo.__oid
+package todoApp.DELETE.todo.__oid
 
 import input.user
 import input.resource
@@ -13,5 +13,5 @@ allowed {
 }
 
 allowed {
-  user.attributes.roles[_] == "evil_genius"
+  user.attributes.roles[_] == "admin"
 }
