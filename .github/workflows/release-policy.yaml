@@ -1,4 +1,4 @@
-name: build-release
+name: build-policy
 
 on:
   workflow_dispatch:
@@ -18,18 +18,18 @@ jobs:
 
     - name: Read config
       id: config
-      uses: opcr-io/ga-yaml-parser@v0.1.1
+      uses: opcr-io/ga-yaml-parser@v0.1
       with:
-        file: .github/config.yaml
+        file: .github/config-policy.yaml
 
     - name: List Sver Tags
-      uses: aserto-dev/sver-action@v0.0.14
+      uses: aserto-dev/sver-action@v0
       id: "sver"
       with:
         docker_image: ${{ steps.config.outputs.repo }}
         docker_registry: ${{ steps.config.outputs.server }}
         docker_username: ${{ steps.config.outputs.username }}
-        docker_password: ${{ secrets.ASERTO_PUSH_KEY }}
+        docker_password: ${{ secrets.ASERTO_POLICY_PUSH_KEY }}
 
     - name: Calculate image tags
       id: "tags"
@@ -45,14 +45,14 @@ jobs:
       uses: opcr-io/policy-login-action@v2
       with:
         username: ${{ steps.config.outputs.username }}
-        password: ${{ secrets.ASERTO_PUSH_KEY }}
+        password: ${{ secrets.ASERTO_POLICY_PUSH_KEY }}
         server: ${{ steps.config.outputs.server }}
 
     - name: Policy Build
       id: policy-build
       uses: opcr-io/policy-build-action@v2
       with:
-        src: src
+        src: content/src
         tag: ${{ steps.config.outputs.repo }}
         revision: "$GITHUB_SHA"
       env:
