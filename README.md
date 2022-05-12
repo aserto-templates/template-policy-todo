@@ -1,5 +1,5 @@
-# policy-template
+# policy-todo
 
-Repository template for Aserto policy repos.
+A policy Aserto's sample todo application.
 
 
