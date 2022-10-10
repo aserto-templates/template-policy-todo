@@ -55,7 +55,7 @@ jobs:
         SERVER: ${{ steps.config.outputs.server }}
       run: |
        while read -r tag; do
-          oras push "$SERVER/$REPO":$tag --manifest-annotations ./annotations.json bundle.tar.gz
+          oras push "$SERVER/$REPO":$tag --annotation-file ./annotations.json bundle.tar.gz
         done < <(echo "${{ steps.sver.outputs.version }}")
 
     - name: Oras Logout
