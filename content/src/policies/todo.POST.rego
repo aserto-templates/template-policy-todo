@@ -1,13 +1,13 @@
 package todoApp.POST.todo
 
-import input.user
 import future.keywords.in
 import input.resource
+import input.user
 
 default allowed = false
 
 allowed {
-  allowedRoles := { "editor", "admin" }
+  allowedRoles := {"editor", "admin"}
   some x in allowedRoles
-  user.attributes.roles[_] == x
+  user.properties.roles[_] == x
 }
