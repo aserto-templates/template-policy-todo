@@ -1,4 +1,4 @@
-package todoApp.DELETE.todo.__id
+package todoApp.DELETE.todos.__id
 
 import future.keywords.in
 import input.resource

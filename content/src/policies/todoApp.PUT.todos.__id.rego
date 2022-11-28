@@ -1,4 +1,4 @@
-package todoApp.PUT.todo.__id
+package todoApp.PUT.todos.__id
 
 import future.keywords.in
 import input.resource
