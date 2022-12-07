@@ -1,7 +1,6 @@
-package todoApp.POST.todo
+package todoApp.POST.todos
 
 import future.keywords.in
-import input.resource
 import input.user
 
 default allowed = false
